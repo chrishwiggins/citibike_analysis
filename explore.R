@@ -1,4 +1,9 @@
 # Get the departures
+
+# library("rjson")
+library(jsonlite)
+library(xts)
+
 json_file <- "http://abe.is/full/of/data/departures.json"
 json_data <- fromJSON(paste(readLines(json_file), collapse=""))
 date = names(unlist(json_data))
