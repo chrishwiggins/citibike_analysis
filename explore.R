@@ -1,3 +1,5 @@
+rm(list=ls())
+
 # Get the departures
 
 # library("rjson")
@@ -29,7 +31,8 @@ both = period.apply(com, endpoints(com, "days"), mean)
 
 # Plot
 par(new = TRUE)
-plot(both, type='l', col="blue", lwd=2, ylim =c(-0, 100),xaxt="n",yaxt="n",xlab="",ylab="")
+#plot(both, type='l', col="blue", lwd=2, ylim =c(-0, 100),xaxt="n",yaxt="n",xlab="",ylab="")
+plot(both)
 axis(4)
 mtext("degrees fahrenheit",side=4,line=3)
 mtext("trips",side=2,line=3)
